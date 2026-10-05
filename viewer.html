@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Visor de documentación del Sistema de Liquidación de Incentivos de B. Braun Medical.">
+  <title>Documento | B. Braun Incentivos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="viewer" class="viewer-page">
+  <header class="viewer-header">
+    <div class="viewer-header__inner">
+      <a class="back-link" href="./" aria-label="Volver al índice de documentación">
+        <span aria-hidden="true">←</span>
+        <span>Volver al índice</span>
+      </a>
+
+      <div class="viewer-header__title" id="viewer-title">Documentación</div>
+
+      <button
+        id="toc-toggle"
+        class="toc-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="document-toc"
+      >
+        Índice
+      </button>
+    </div>
+  </header>
+
+  <main class="viewer-shell">
+    <aside id="document-toc" class="toc" aria-label="Índice del documento">
+      <div class="toc__inner">
+        <div class="toc__label">EN ESTA PÁGINA</div>
+        <nav id="toc-list"></nav>
+      </div>
+    </aside>
+
+    <div class="document-column">
+      <div id="document-status" class="document-status" role="status">Cargando documento…</div>
+      <article id="document-content" class="markdown-body" hidden></article>
+    </div>
+  </main>
+
+  <script src="js/marked.min.js"></script>
+  <script src="js/purify.min.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+AGREGAR COMO PRIMERA REGLA dentro de <system.webServer><rewrite><rules>
+del web.config del sitio principal (SPA):
+
+<rule name="Documentacion - contenido estatico" stopProcessing="true">
+  <match url="^documentacion(?:/.*)?$" ignoreCase="true" />
+  <action type="None" />
+</rule>
+
+Debe quedar ANTES de cualquier regla de proxy, API o fallback de la SPA.
